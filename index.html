@@ -35,7 +35,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:
 
 header{padding:2rem 1.5rem 1rem;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
 .logo{font-family:var(--display);font-size:clamp(2.4rem,6vw,3.2rem);letter-spacing:.04em;line-height:1;color:var(--text)}
-.logo span{color:var(--accent)}
+.logo span{color:var(--text)}
 .logo small{display:block;font-family:var(--font);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text2);font-weight:400}
 .submit-btn{
 background:var(--accent);color:#fff;border:none;padding:.6rem 1.2rem;
@@ -182,16 +182,10 @@ const SVG_CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 const SVG_PIN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
 
 const SEED=[
-{name:"Midnight Run BKK",date:"2026-04-12",loc:"RCA, Bangkok",type:"meet",desc:"Weekly Saturday night car meet. All builds welcome — JDM, Euro, Thai-spec. Street food vendors on site."},
-{name:"Bira Circuit Track Day",date:"2026-04-18",loc:"Bira Circuit, Pattaya",type:"track",desc:"Open lapping sessions from 8AM–4PM. Helmets required. Rental available at gate."},
-{name:"Bangkok Auto Salon 2026",date:"2026-05-02",loc:"BITEC Bangna, Bangkok",type:"show",desc:"Thailand's biggest modified car show. 400+ builds, live judging, vendor alley."},
-{name:"Gulf of Thailand Coastal Cruise",date:"2026-05-10",loc:"Hua Hin → Chumphon",type:"cruise",desc:"Two-day scenic coastal run. 280km through fishing villages and mountain passes."},
-{name:"Chiang Mai Night Meet",date:"2026-04-25",loc:"Maya Mall, Chiang Mai",type:"meet",desc:"Northern Thailand's biggest monthly meet. Mountain roads pre-cruise at 6PM, static meet from 8PM."},
-{name:"Phuket Drift Matsuri",date:"2026-05-15",loc:"Saphan Hin, Phuket",type:"track",desc:"Drift competition and open practice. Classes for all skill levels. Beach afterparty."},
-{name:"Royal Paragon Supercar Show",date:"2026-06-01",loc:"Siam Paragon, Bangkok",type:"show",desc:"Hypercar and exotic showcase. Invitation display plus public exhibition. Free entry."},
-{name:"Isaan Back Roads Cruise",date:"2026-05-22",loc:"Khon Kaen → Nakhon Ratchasima",type:"cruise",desc:"350km through Thailand's northeast. Empty roads, incredible food stops, temple visits."},
-{name:"Pattaya Import Night",date:"2026-04-30",loc:"Terminal 21, Pattaya",type:"meet",desc:"JDM and Euro imports only. Dyno pulls on site. Trophy categories for best engine bay and stance."},
-{name:"Chang Circuit Time Attack",date:"2026-06-08",loc:"Chang International Circuit, Buriram",type:"track",desc:"Timed attack format on Thailand's F1-grade circuit. Pro and amateur classes."}
+{name:"Bangkok International Motor Show 2026",date:"2026-03-25",loc:"IMPACT Muang Thong Thani, Bangkok",type:"show",desc:"The 47th edition. 170+ manufacturers, 45 car & motorcycle brands, new EV launches from Tesla, Chery, and more. Runs through April 5."},
+{name:"IMPACT Speed Fest 2026",date:"2026-07-17",loc:"IMPACT Challenger Hall 2-3, Bangkok",type:"show",desc:"Thailand's ultimate auto festival. 2,500+ vehicles, 300+ brands, live drift, go-karts, restoration workshops, auctions. July 17–19."},
+{name:"Bangsaen Grand Prix / Thailand Super Series",date:"2026-07-03",loc:"Bangsaen Street Circuit, Chonburi",type:"track",desc:"Street racing on closed public roads. GT3, GT4, Porsche Carrera Cup Asia. Thailand's biggest motorsport weekend. July 3–5."},
+{name:"Das Treffen 10",date:"2026-12-01",loc:"Impact Speed Park, Bangkok",type:"meet",desc:"Southeast Asia's largest Porsche gathering. Air-cooled icons, modern GTs, rare builds, pop-up shops. Exact December date TBA."}
 ];
 
 let events=[],filter='all';
