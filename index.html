@@ -2,15 +2,249 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4CUF</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4CUF — Thailand Car Events | Meets, Track Days, Shows & Cruises</title>
+<meta name="description" content="Discover car events across Thailand — meets, track days, shows, and cruises in Bangkok, Pattaya, Chiang Mai, Phuket and beyond. Post and find events near you.">
+<meta name="keywords" content="Thailand car events, car meets Bangkok, track days Thailand, car shows Pattaya, JDM Thailand, car cruise Chiang Mai, Thai car culture, supercar events Thailand">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.4cuf.com">
+<meta property="og:title" content="4CUF — Thailand Car Events">
+<meta property="og:description" content="Find and post car events across Thailand. Meets, track days, shows, and cruises.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_TH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="4CUF — Thailand Car Events">
+<meta name="twitter:description" content="Find and post car events across Thailand. Meets, track days, shows, and cruises.">
+<meta name="theme-color" content="#ff3e1d">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"4CUF","description":"Car events board for Thailand — meets, track days, shows, and cruises","url":"https://www.4cuf.com"}</script>
 <style>
-*{margin:0;padding:0}
-html,body{height:100%;background:#000;display:flex;align-items:center;justify-content:center}
-h1{color:#fff;font-family:sans-serif;font-size:6rem;letter-spacing:.1em}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--border:#222;
+--text:#e8e8e8;--text2:#888;--accent:#ff3e1d;--accent2:#ff6b4a;
+--meet:#22d3ee;--track:#f59e0b;--show:#a78bfa;--cruise:#34d399;
+--radius:6px;--font:"DM Sans",sans-serif;--display:"Bebas Neue",sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.5;min-height:100vh;overflow-x:hidden}
+::selection{background:var(--accent);color:#fff}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+
+header{padding:2rem 1.5rem 1rem;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.logo{font-family:var(--display);font-size:clamp(2.4rem,6vw,3.2rem);letter-spacing:.04em;line-height:1;color:var(--text)}
+.logo span{color:var(--accent)}
+.logo small{display:block;font-family:var(--font);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text2);font-weight:400}
+.submit-btn{
+background:var(--accent);color:#fff;border:none;padding:.6rem 1.2rem;
+font-family:var(--display);font-size:1.05rem;letter-spacing:.06em;
+cursor:pointer;border-radius:var(--radius);transition:background .15s;white-space:nowrap;
+}
+.submit-btn:hover{background:var(--accent2)}
+
+.controls{max-width:1100px;margin:0 auto;padding:.8rem 1.5rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.search{
+flex:1;min-width:200px;padding:.55rem .8rem;background:var(--surface);border:1px solid var(--border);
+color:var(--text);font-family:var(--font);font-size:.85rem;border-radius:var(--radius);outline:none;transition:border .15s;
+}
+.search:focus{border-color:var(--accent)}
+.search::placeholder{color:#555}
+.filters{display:flex;gap:.35rem;flex-wrap:wrap}
+.filter-btn{
+padding:.4rem .75rem;font-size:.75rem;font-weight:600;border:1px solid var(--border);
+background:var(--surface);color:var(--text2);border-radius:var(--radius);cursor:pointer;
+transition:all .15s;text-transform:uppercase;letter-spacing:.04em;font-family:var(--font);
+}
+.filter-btn:hover{border-color:#444;color:var(--text)}
+.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.filter-btn[data-t="meet"].active{background:var(--meet);border-color:var(--meet);color:#000}
+.filter-btn[data-t="track"].active{background:var(--track);border-color:var(--track);color:#000}
+.filter-btn[data-t="show"].active{background:var(--show);border-color:var(--show);color:#000}
+.filter-btn[data-t="cruise"].active{background:var(--cruise);border-color:var(--cruise);color:#000}
+
+.grid{max-width:1100px;margin:1rem auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.8rem}
+.card{
+background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+padding:1.2rem;cursor:default;transition:border-color .15s,transform .15s;position:relative;overflow:hidden;
+}
+.card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}
+.card[data-t="meet"]::before{background:var(--meet)}
+.card[data-t="track"]::before{background:var(--track)}
+.card[data-t="show"]::before{background:var(--show)}
+.card[data-t="cruise"]::before{background:var(--cruise)}
+.card:hover{border-color:#333;transform:translateY(-2px)}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;margin-bottom:.5rem}
+.card-title{font-family:var(--display);font-size:1.35rem;letter-spacing:.03em;line-height:1.1}
+.tag{
+font-size:.6rem;font-weight:600;padding:.2rem .5rem;border-radius:3px;
+text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
+}
+.tag-meet{background:rgba(34,211,238,.12);color:var(--meet)}
+.tag-track{background:rgba(245,158,11,.12);color:var(--track)}
+.tag-show{background:rgba(167,139,250,.12);color:var(--show)}
+.tag-cruise{background:rgba(52,211,153,.12);color:var(--cruise)}
+.card-meta{display:flex;gap:1rem;font-size:.78rem;color:var(--text2);margin-bottom:.5rem}
+.card-meta svg{width:13px;height:13px;vertical-align:-2px;margin-right:3px;opacity:.6}
+.card-desc{font-size:.8rem;color:#999;line-height:1.5}
+.empty{grid-column:1/-1;text-align:center;padding:3rem 1rem;color:var(--text2);font-size:.9rem}
+
+.stripe{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+.stripe hr{border:none;border-top:1px solid var(--border)}
+
+.overlay{
+position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:none;
+align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);
+}
+.overlay.open{display:flex}
+.modal{
+background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+padding:1.5rem;width:100%;max-width:440px;max-height:90vh;overflow-y:auto;position:relative;
+}
+.modal h2{font-family:var(--display);font-size:1.6rem;letter-spacing:.03em;margin-bottom:1rem}
+.modal label{display:block;font-size:.75rem;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem;margin-top:.8rem}
+.modal input,.modal textarea,.modal select{
+width:100%;padding:.5rem .7rem;background:var(--surface2);border:1px solid var(--border);
+color:var(--text);font-family:var(--font);font-size:.85rem;border-radius:var(--radius);outline:none;
+}
+.modal textarea{resize:vertical;min-height:60px}
+.modal input:focus,.modal textarea:focus,.modal select:focus{border-color:var(--accent)}
+.modal-actions{display:flex;gap:.5rem;margin-top:1.2rem;justify-content:flex-end}
+.modal-actions button{
+padding:.5rem 1rem;border-radius:var(--radius);font-family:var(--font);font-size:.82rem;
+font-weight:600;cursor:pointer;border:1px solid var(--border);transition:all .15s;
+}
+.btn-cancel{background:transparent;color:var(--text2)}
+.btn-cancel:hover{color:var(--text);border-color:#444}
+.btn-save{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-save:hover{background:var(--accent2)}
+.close-modal{position:absolute;top:.8rem;right:1rem;background:none;border:none;color:var(--text2);font-size:1.2rem;cursor:pointer}
+.close-modal:hover{color:var(--text)}
+
+.count{max-width:1100px;margin:0 auto;padding:.4rem 1.5rem;font-size:.72rem;color:var(--text2);letter-spacing:.03em}
+
+@media(max-width:640px){
+  header{padding:1.2rem 1rem .6rem}
+  .controls{padding:.6rem 1rem}
+  .grid{padding:0 1rem;grid-template-columns:1fr;gap:.6rem}
+  .stripe{padding:0 1rem}
+  .count{padding:.4rem 1rem}
+}
 </style>
 </head>
 <body>
-<h1>4CUF</h1>
+
+<header>
+  <div class="logo">4<span>CUF</span><small>Thailand Car Events</small></div>
+  <button class="submit-btn" onclick="openModal()">+ POST EVENT</button>
+</header>
+
+<div class="stripe"><hr></div>
+
+<div class="controls">
+  <input class="search" type="text" placeholder="Search events or locations…" oninput="render()">
+  <div class="filters">
+    <button class="filter-btn active" data-t="all" onclick="setFilter(this)">All</button>
+    <button class="filter-btn" data-t="meet" onclick="setFilter(this)">Meets</button>
+    <button class="filter-btn" data-t="track" onclick="setFilter(this)">Track</button>
+    <button class="filter-btn" data-t="show" onclick="setFilter(this)">Shows</button>
+    <button class="filter-btn" data-t="cruise" onclick="setFilter(this)">Cruise</button>
+  </div>
+</div>
+
+<div class="count" id="count"></div>
+<div class="grid" id="grid"></div>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="close-modal" onclick="closeModal()">&times;</button>
+    <h2>Post Event</h2>
+    <label>Event Name</label>
+    <input id="f-name" placeholder="e.g. Midnight Meet BKK">
+    <label>Date</label>
+    <input id="f-date" type="date">
+    <label>Location</label>
+    <input id="f-loc" placeholder="e.g. CentralWorld, Bangkok">
+    <label>Type</label>
+    <select id="f-type"><option value="meet">Meet</option><option value="track">Track Day</option><option value="show">Show</option><option value="cruise">Cruise</option></select>
+    <label>Description</label>
+    <textarea id="f-desc" placeholder="Quick details…"></textarea>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn-save" onclick="saveEvent()">Post</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const SVG_CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
+const SVG_PIN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+
+const SEED=[
+{name:"Midnight Run BKK",date:"2026-04-12",loc:"RCA, Bangkok",type:"meet",desc:"Weekly Saturday night car meet. All builds welcome — JDM, Euro, Thai-spec. Street food vendors on site."},
+{name:"Bira Circuit Track Day",date:"2026-04-18",loc:"Bira Circuit, Pattaya",type:"track",desc:"Open lapping sessions from 8AM–4PM. Helmets required. Rental available at gate."},
+{name:"Bangkok Auto Salon 2026",date:"2026-05-02",loc:"BITEC Bangna, Bangkok",type:"show",desc:"Thailand's biggest modified car show. 400+ builds, live judging, vendor alley."},
+{name:"Gulf of Thailand Coastal Cruise",date:"2026-05-10",loc:"Hua Hin → Chumphon",type:"cruise",desc:"Two-day scenic coastal run. 280km through fishing villages and mountain passes."},
+{name:"Chiang Mai Night Meet",date:"2026-04-25",loc:"Maya Mall, Chiang Mai",type:"meet",desc:"Northern Thailand's biggest monthly meet. Mountain roads pre-cruise at 6PM, static meet from 8PM."},
+{name:"Phuket Drift Matsuri",date:"2026-05-15",loc:"Saphan Hin, Phuket",type:"track",desc:"Drift competition and open practice. Classes for all skill levels. Beach afterparty."},
+{name:"Royal Paragon Supercar Show",date:"2026-06-01",loc:"Siam Paragon, Bangkok",type:"show",desc:"Hypercar and exotic showcase. Invitation display plus public exhibition. Free entry."},
+{name:"Isaan Back Roads Cruise",date:"2026-05-22",loc:"Khon Kaen → Nakhon Ratchasima",type:"cruise",desc:"350km through Thailand's northeast. Empty roads, incredible food stops, temple visits."},
+{name:"Pattaya Import Night",date:"2026-04-30",loc:"Terminal 21, Pattaya",type:"meet",desc:"JDM and Euro imports only. Dyno pulls on site. Trophy categories for best engine bay and stance."},
+{name:"Chang Circuit Time Attack",date:"2026-06-08",loc:"Chang International Circuit, Buriram",type:"track",desc:"Timed attack format on Thailand's F1-grade circuit. Pro and amateur classes."}
+];
+
+let events=[],filter='all';
+function load(){const s=localStorage.getItem('4cuf_events');events=s?JSON.parse(s):[...SEED];if(!s)save();}
+function save(){localStorage.setItem('4cuf_events',JSON.stringify(events));}
+function fmt(d){const o=new Date(d+'T00:00:00');return o.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
+
+function render(){
+  const q=document.querySelector('.search').value.toLowerCase();
+  let f=events.filter(e=>{
+    if(filter!=='all'&&e.type!==filter)return false;
+    if(q&&!e.name.toLowerCase().includes(q)&&!e.loc.toLowerCase().includes(q))return false;
+    return true;
+  }).sort((a,b)=>a.date.localeCompare(b.date));
+  document.getElementById('count').textContent=f.length+' event'+(f.length!==1?'s':'')+' found';
+  const g=document.getElementById('grid');
+  if(!f.length){g.innerHTML='<div class="empty">No events match your search.</div>';return;}
+  g.innerHTML=f.map(e=>`
+    <div class="card" data-t="${e.type}">
+      <div class="card-head">
+        <div class="card-title">${esc(e.name)}</div>
+        <span class="tag tag-${e.type}">${e.type}</span>
+      </div>
+      <div class="card-meta">
+        <span>${SVG_CAL} ${fmt(e.date)}</span>
+        <span>${SVG_PIN} ${esc(e.loc)}</span>
+      </div>
+      <div class="card-desc">${esc(e.desc)}</div>
+    </div>`).join('');
+}
+
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+function setFilter(btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');filter=btn.dataset.t;render();
+}
+function openModal(){document.getElementById('overlay').classList.add('open');}
+function closeModal(){document.getElementById('overlay').classList.remove('open');}
+document.getElementById('overlay').addEventListener('click',function(e){if(e.target===this)closeModal();});
+
+function saveEvent(){
+  const n=document.getElementById('f-name').value.trim();
+  const d=document.getElementById('f-date').value;
+  const l=document.getElementById('f-loc').value.trim();
+  const t=document.getElementById('f-type').value;
+  const desc=document.getElementById('f-desc').value.trim();
+  if(!n||!d||!l){alert('Fill in name, date, and location.');return;}
+  events.push({name:n,date:d,loc:l,type:t,desc:desc||'No description provided.'});
+  save();render();closeModal();
+  ['f-name','f-date','f-loc','f-desc'].forEach(id=>document.getElementById(id).value='');
+}
+
+load();render();
+</script>
 </body>
 </html>
