@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>4CUF — Thailand Car Events | Meets, Track Days, Shows & Cruises</title>
-<meta name="description" content="Discover car events across Thailand — meets, track days, shows, and cruises in Bangkok, Pattaya, Chiang Mai, Phuket and beyond. Post and find events near you.">
+<meta name="description" content="Discover car events across Thailand — meets, track days, shows, and cruises in Bangkok, Pattaya, Chiang Mai, Phuket and beyond.">
 <meta name="keywords" content="Thailand car events, car meets Bangkok, track days Thailand, car shows Pattaya, JDM Thailand, car cruise Chiang Mai, Thai car culture, supercar events Thailand">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://www.4cuf.com">
 <meta property="og:title" content="4CUF — Thailand Car Events">
-<meta property="og:description" content="Find and post car events across Thailand. Meets, track days, shows, and cruises.">
+<meta property="og:description" content="Find car events across Thailand. Meets, track days, shows, and cruises.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_TH">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="4CUF — Thailand Car Events">
-<meta name="twitter:description" content="Find and post car events across Thailand. Meets, track days, shows, and cruises.">
+<meta name="twitter:description" content="Find car events across Thailand. Meets, track days, shows, and cruises.">
 <meta name="theme-color" content="#ff3e1d">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"4CUF","description":"Car events board for Thailand — meets, track days, shows, and cruises","url":"https://www.4cuf.com"}</script>
 <style>
@@ -34,15 +34,22 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:
 ::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
 
 header{padding:2rem 1.5rem 1rem;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
-.logo{font-family:var(--display);font-size:clamp(2.4rem,6vw,3.2rem);letter-spacing:.04em;line-height:1;color:var(--text)}
-.logo span{color:var(--text)}
-.logo small{display:block;font-family:var(--font);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text2);font-weight:400}
-.submit-btn{
-background:var(--accent);color:#fff;border:none;padding:.6rem 1.2rem;
-font-family:var(--display);font-size:1.05rem;letter-spacing:.06em;
-cursor:pointer;border-radius:var(--radius);transition:background .15s;white-space:nowrap;
+.logo{font-family:sans-serif;font-size:clamp(2.4rem,6vw,3.2rem);letter-spacing:.1em;line-height:1;color:#fff;font-weight:700}
+.logo span{color:#fff}
+.logo small{display:block;font-family:var(--font);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text2);font-weight:400;margin-top:.4rem}
+.updated{font-family:var(--font);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
+.updated b{color:var(--accent);font-weight:600;letter-spacing:.04em}
+.header-right{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem}
+.contact{display:flex;gap:.35rem;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.contact-label{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin-right:.3rem}
+.reveal-btn{
+  padding:.35rem .7rem;font-size:.7rem;font-weight:600;border:1px solid var(--border);
+  background:var(--surface);color:var(--text2);border-radius:var(--radius);cursor:pointer;
+  transition:all .15s;text-transform:uppercase;letter-spacing:.06em;font-family:var(--font);
+  text-decoration:none;display:inline-block;white-space:nowrap;
 }
-.submit-btn:hover{background:var(--accent2)}
+.reveal-btn:hover{border-color:var(--accent);color:var(--text)}
+.reveal-btn.revealed{background:var(--accent);border-color:var(--accent);color:#fff}
 
 .controls{max-width:1100px;margin:0 auto;padding:.8rem 1.5rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
 .search{
@@ -76,7 +83,10 @@ padding:1.2rem;cursor:default;transition:border-color .15s,transform .15s;positi
 .card[data-t="cruise"]::before{background:var(--cruise)}
 .card:hover{border-color:#333;transform:translateY(-2px)}
 .card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;margin-bottom:.5rem}
-.card-title{font-family:var(--display);font-size:1.35rem;letter-spacing:.03em;line-height:1.1}
+.card-title{font-family:var(--display);font-size:1.35rem;letter-spacing:.03em;line-height:1.1;color:var(--text);text-decoration:none;display:inline-block}
+a.card-title:hover{color:var(--accent)}
+.card-title .ext{font-size:.75rem;opacity:.4;margin-left:.15em;vertical-align:.1em}
+a.card-title:hover .ext{opacity:1}
 .tag{
 font-size:.6rem;font-weight:600;padding:.2rem .5rem;border-radius:3px;
 text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
@@ -85,44 +95,27 @@ text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
 .tag-track{background:rgba(245,158,11,.12);color:var(--track)}
 .tag-show{background:rgba(167,139,250,.12);color:var(--show)}
 .tag-cruise{background:rgba(52,211,153,.12);color:var(--cruise)}
-.card-meta{display:flex;gap:1rem;font-size:.78rem;color:var(--text2);margin-bottom:.5rem}
+.card-meta{display:flex;gap:1rem;font-size:.78rem;color:var(--text2);margin-bottom:.5rem;flex-wrap:wrap;align-items:center}
 .card-meta svg{width:13px;height:13px;vertical-align:-2px;margin-right:3px;opacity:.6}
+.loc-link{color:var(--text2);text-decoration:none;transition:color .15s}
+.loc-link:hover{color:var(--accent)}
+.loc-link:hover svg{opacity:1}
+.countdown{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.18rem .45rem;border-radius:3px;background:rgba(255,62,29,.12);color:var(--accent);white-space:nowrap}
+.countdown.soon{background:var(--accent);color:#fff}
+.countdown.today{background:#fff;color:#000;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .card-desc{font-size:.8rem;color:#999;line-height:1.5}
 .empty{grid-column:1/-1;text-align:center;padding:3rem 1rem;color:var(--text2);font-size:.9rem}
 
 .stripe{max-width:1100px;margin:0 auto;padding:0 1.5rem}
 .stripe hr{border:none;border-top:1px solid var(--border)}
 
-.overlay{
-position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:100;display:none;
-align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px);
-}
-.overlay.open{display:flex}
-.modal{
-background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-padding:1.5rem;width:100%;max-width:440px;max-height:90vh;overflow-y:auto;position:relative;
-}
-.modal h2{font-family:var(--display);font-size:1.6rem;letter-spacing:.03em;margin-bottom:1rem}
-.modal label{display:block;font-size:.75rem;font-weight:600;color:var(--text2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem;margin-top:.8rem}
-.modal input,.modal textarea,.modal select{
-width:100%;padding:.5rem .7rem;background:var(--surface2);border:1px solid var(--border);
-color:var(--text);font-family:var(--font);font-size:.85rem;border-radius:var(--radius);outline:none;
-}
-.modal textarea{resize:vertical;min-height:60px}
-.modal input:focus,.modal textarea:focus,.modal select:focus{border-color:var(--accent)}
-.modal-actions{display:flex;gap:.5rem;margin-top:1.2rem;justify-content:flex-end}
-.modal-actions button{
-padding:.5rem 1rem;border-radius:var(--radius);font-family:var(--font);font-size:.82rem;
-font-weight:600;cursor:pointer;border:1px solid var(--border);transition:all .15s;
-}
-.btn-cancel{background:transparent;color:var(--text2)}
-.btn-cancel:hover{color:var(--text);border-color:#444}
-.btn-save{background:var(--accent);border-color:var(--accent);color:#fff}
-.btn-save:hover{background:var(--accent2)}
-.close-modal{position:absolute;top:.8rem;right:1rem;background:none;border:none;color:var(--text2);font-size:1.2rem;cursor:pointer}
-.close-modal:hover{color:var(--text)}
-
 .count{max-width:1100px;margin:0 auto;padding:.4rem 1.5rem;font-size:.72rem;color:var(--text2);letter-spacing:.03em}
+
+.past-head{max-width:1100px;margin:2.5rem auto .4rem;padding:0 1.5rem;font-family:var(--display);font-size:1.6rem;letter-spacing:.06em;color:var(--text2);font-weight:400;border-top:1px solid var(--border);padding-top:1.5rem}
+.past-head.hidden{display:none}
+.grid.past .card{opacity:.55}
+.grid.past .card:hover{opacity:1}
 
 @media(max-width:640px){
   header{padding:1.2rem 1rem .6rem}
@@ -136,8 +129,15 @@ font-weight:600;cursor:pointer;border:1px solid var(--border);transition:all .15
 <body>
 
 <header>
-  <div class="logo">4<span>CUF</span><small>Thailand Car Events</small></div>
-  <button class="submit-btn" onclick="openModal()">+ POST EVENT</button>
+  <div class="logo">4<span>CUF</span><small>Thailand Car Events — by Pankaj Ahuja</small></div>
+  <div class="header-right">
+    <div class="contact"><span class="contact-label">Talk to me:</span>
+      <button class="reveal-btn" data-id="line" onclick="reveal(this)">Line</button>
+      <button class="reveal-btn" data-id="ig" onclick="reveal(this)">Instagram</button>
+      <button class="reveal-btn" data-id="wechat" onclick="reveal(this)">WeChat</button>
+    </div>
+    <div class="updated">Updated: <b id="updated-date">—</b></div>
+  </div>
 </header>
 
 <div class="stripe"><hr></div>
@@ -156,65 +156,95 @@ font-weight:600;cursor:pointer;border:1px solid var(--border);transition:all .15
 <div class="count" id="count"></div>
 <div class="grid" id="grid"></div>
 
-<div class="overlay" id="overlay">
-  <div class="modal">
-    <button class="close-modal" onclick="closeModal()">&times;</button>
-    <h2>Post Event</h2>
-    <label>Event Name</label>
-    <input id="f-name" placeholder="e.g. Midnight Meet BKK">
-    <label>Date</label>
-    <input id="f-date" type="date">
-    <label>Location</label>
-    <input id="f-loc" placeholder="e.g. CentralWorld, Bangkok">
-    <label>Type</label>
-    <select id="f-type"><option value="meet">Meet</option><option value="track">Track Day</option><option value="show">Show</option><option value="cruise">Cruise</option></select>
-    <label>Description</label>
-    <textarea id="f-desc" placeholder="Quick details…"></textarea>
-    <div class="modal-actions">
-      <button class="btn-cancel" onclick="closeModal()">Cancel</button>
-      <button class="btn-save" onclick="saveEvent()">Post</button>
-    </div>
-  </div>
-</div>
+<h2 class="past-head" id="past-head">Past Events</h2>
+<div class="grid past" id="grid-past"></div>
 
 <script>
 const SVG_CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
 const SVG_PIN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
 
-const SEED=[
-{name:"Bangkok International Motor Show 2026",date:"2026-03-25",loc:"IMPACT Muang Thong Thani, Bangkok",type:"show",desc:"The 47th edition. 170+ manufacturers, 45 car & motorcycle brands, new EV launches from Tesla, Chery, and more. Runs through April 5."},
-{name:"IMPACT Speed Fest 2026",date:"2026-07-17",loc:"IMPACT Challenger Hall 2-3, Bangkok",type:"show",desc:"Thailand's ultimate auto festival. 2,500+ vehicles, 300+ brands, live drift, go-karts, restoration workshops, auctions. July 17–19."},
-{name:"Bangsaen Grand Prix / Thailand Super Series",date:"2026-07-03",loc:"Bangsaen Street Circuit, Chonburi",type:"track",desc:"Street racing on closed public roads. GT3, GT4, Porsche Carrera Cup Asia. Thailand's biggest motorsport weekend. July 3–5."},
-{name:"Das Treffen 10",date:"2026-12-01",loc:"Impact Speed Park, Bangkok",type:"meet",desc:"Southeast Asia's largest Porsche gathering. Air-cooled icons, modern GTs, rare builds, pop-up shops. Exact December date TBA."}
+const EVENTS=[
+{name:"TSS Round 1 — Chang Circuit",date:"2026-05-21",loc:"Chang International Circuit, Buriram",type:"track",desc:"Season-opening race weekend of the Thailand Super Series. GT3, Super Production, TCR Thailand and support classes. May 21–24.",url:"https://51gt3.com/en/article/101332/tss-thailand-super-series-2026-provisional-calendar"},
+{name:"BMW M Race Track Training",date:"2026-05-16",loc:"Bira International Circuit, Pattaya",type:"track",desc:"Two-day factory M performance training at Bira. Briefing Friday night, full track day Saturday & Sunday. May 16–17.",url:"https://www.bmw.co.th/en/topics/magazine/bmw-m-race-track-training.html"},
+{name:"Automotive Manufacturing Expo 2026",date:"2026-06-17",loc:"BITEC Bangna, Bangkok",type:"show",desc:"ASEAN's biggest automotive parts & manufacturing technology show. 21st edition. Trade-focused but open to enthusiasts. Jun 17–20.",url:"https://www.automanexpo.com/"},
+{name:"Bangsaen Grand Prix 2026",date:"2026-07-01",loc:"Bangsaen Street Circuit, Chonburi",type:"track",desc:"20th anniversary of Thailand's biggest street race. GT3, Porsche Carrera Cup Asia, F4 SEA, TCR support. Jul 1–5.",url:"https://renndriver.com/events/bangsaen-grand-prix/"},
+{name:"IMPACT Speed Fest 2026",date:"2026-07-17",loc:"IMPACT Challenger Hall 2-3, Bangkok",type:"show",desc:"2,500+ cars, 300+ brands, 100+ clubs. Live restoration, auctions, rare builds including HKS R32 and MADLANE 935.",url:"https://impactspeedfest.com/"},
+{name:"Thailand International Motor Expo 2026",date:"2026-12-02",loc:"IMPACT Challenger 1-3, Nonthaburi",type:"show",desc:"The 43rd Motor Expo. 12-day showcase of production cars, EVs, hydrogen & e-fuel concepts. Dec 2–13.",url:"https://www.motorexpo.co.th/"},
+{name:"Das Treffen 11",date:"2026-12-01",loc:"Impact Speed Park, Bangkok",type:"meet",desc:"Southeast Asia's largest Porsche gathering. Air-cooled icons, modern GTs, rare builds, pop-up shops. Exact December date TBA.",url:"https://www.facebook.com/DasTreffenThailand/"},
+{name:"Rising Sunday — Monthly Meet",date:"2026-05-03",loc:"Block 28, Samyan, Bangkok",type:"meet",desc:"Bangkok's premier monthly cars & coffee. JDM legends, European exotics, old-school rides. First Sunday of the month, free entry.",url:"https://renndriver.com/events/rising-sunday/"},
+{name:"Only Octane Cars & Coffee",date:"2026-04-26",loc:"Crystal Design Center (CDC), Bangkok",type:"meet",desc:"Classic cars & coffee-style Sunday morning meet at CDC. Supercars, classics, JDM builds. Relaxed, community-driven.",url:"https://www.timeout.com/bangkok/things-to-do/only-octane-cars-coffee"},
+{name:"Curvistan Bangkok — Porsche Meet",date:"2026-04-18",loc:"Curvistan, Thonglor, Bangkok",type:"meet",desc:"Café + gallery + clubhouse by Stefan Bogner. Rotating Porsche exhibits, weekend gatherings, design-minded crowd.",url:"https://renndriver.com/guides/curvistan-bangkok/"},
+{name:"Bangkok International Motor Show 2026",date:"2026-03-25",loc:"IMPACT Muang Thong Thani, Bangkok",type:"show",desc:"The 47th edition. Theme 'Iconic Synchronicity'. 45 brands, new EV launches from Tesla, Chery and more. Mar 25 – Apr 5.",url:"https://bims47.motorshow.in.th/en/"},
+{name:"JDM & Custom Culture BKK",date:"2026-03-28",loc:"Loading Area, Challenger Hall, Bangkok",type:"show",desc:"Outdoor showcase at BIMS — 100+ modified and JDM cars per day. Car clubs rolled in across the weekend. Mar 28–29.",url:"https://bims47.motorshow.in.th/en/"},
+{name:"MotoGP Thailand Grand Prix 2026",date:"2026-02-27",loc:"Chang International Circuit, Buriram",type:"track",desc:"MotoGP 2026 season opener. Three days of practice, sprint, and the full-length GP. Feb 27 – Mar 1.",url:"https://www.motogp.com/en/calendar/2026/event/thailand/364a0bd9-d3c2-4ab3-a4cd-211ff469953e"},
+{name:"HCD Night Track Day",date:"2026-03-19",loc:"Chang International Circuit, Buriram",type:"track",desc:"After-dark lapping session organised by HDrive. Open pitlane, instruction available, street cars welcome.",url:"https://www.hdrive-racing.com/post/hcd-track-day-2026"},
+{name:"TSS Finale — Chang Circuit",date:"2026-10-30",loc:"Chang International Circuit, Buriram",type:"track",desc:"Season finale of the Thailand Super Series. GT3, GT4, GT Cup and support classes decide the championship. Oct 30 – Nov 1.",url:"https://en.wikipedia.org/wiki/2026_Thailand_Super_Series"},
+{name:"D1GP Thailand — Season Finale",date:"2026-12-18",loc:"Chang International Circuit, Buriram",type:"track",desc:"Drift championship finale rounds 5 & 6 at BRIC's drift track. Night running, tandem battles. Dec 18–20.",url:"https://www.facebook.com/ChangCircuitOfficial/posts/1000824608937389/"},
+{name:"Cars & Coffee Chiang Mai",date:"2026-05-02",loc:"Central Chiang Mai Festival rooftop",type:"meet",desc:"Monthly morning meet on the rooftop carpark — enthusiast turnout 7–11am, free entry, any car welcome.",url:"https://www.facebook.com/carsandcoffeechiangmai/"},
+{name:"D1GP Thailand — Season Opener",date:"2026-04-03",loc:"Chang International Circuit, Buriram",type:"track",desc:"Opening drift rounds of the 2026 D1GP Thailand season with night running at BRIC drift track. Apr 3–5.",url:"https://www.facebook.com/d1gpthailand/posts/920490230823045/"},
+{name:"Landed Show Thailand",date:"2026-02-14",loc:"Rancho Charnvee Resort, Khao Yai",type:"show",desc:"Outdoor luxury & supercar showcase with curated classics, vendor booths and hospitality at a Khao Yai golf resort.",url:"https://renndriver.com/resources/thailand-car-events/"}
 ];
 
-let events=[],filter='all';
-function load(){const s=localStorage.getItem('4cuf_events');events=s?JSON.parse(s):[...SEED];if(!s)save();}
-function save(){localStorage.setItem('4cuf_events',JSON.stringify(events));}
+let filter='all';
 function fmt(d){const o=new Date(d+'T00:00:00');return o.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
+function thaiToday(){
+  const now=new Date();
+  const thai=new Date(now.getTime()+(now.getTimezoneOffset()+420)*60000);
+  return thai.toISOString().slice(0,10);
+}
+function daysUntil(d){
+  const today=thaiToday();
+  const a=new Date(today+'T00:00:00Z'),b=new Date(d+'T00:00:00Z');
+  return Math.round((b-a)/86400000);
+}
+function countdown(d){
+  const n=daysUntil(d);
+  if(n<0)return '';
+  if(n===0)return '<span class="countdown today">Today</span>';
+  if(n===1)return '<span class="countdown soon">Tomorrow</span>';
+  if(n<=7)return `<span class="countdown soon">${n} days left</span>`;
+  let txt;
+  if(n<14)txt=`${n} days left`;
+  else if(n<60){const w=Math.round(n/7);txt=`${w} week${w!==1?'s':''} left`;}
+  else if(n<365){const m=Math.round(n/30);txt=`${m} month${m!==1?'s':''} left`;}
+  else{const y=Math.round(n/365);txt=`${y} year${y!==1?'s':''} left`;}
+  return `<span class="countdown">${txt}</span>`;
+}
 
-function render(){
-  const q=document.querySelector('.search').value.toLowerCase();
-  let f=events.filter(e=>{
-    if(filter!=='all'&&e.type!==filter)return false;
-    if(q&&!e.name.toLowerCase().includes(q)&&!e.loc.toLowerCase().includes(q))return false;
-    return true;
-  }).sort((a,b)=>a.date.localeCompare(b.date));
-  document.getElementById('count').textContent=f.length+' event'+(f.length!==1?'s':'')+' found';
-  const g=document.getElementById('grid');
-  if(!f.length){g.innerHTML='<div class="empty">No events match your search.</div>';return;}
-  g.innerHTML=f.map(e=>`
+function card(e){
+  const title=e.url?`<a class="card-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)} <span class="ext">↗</span></a>`:`<span class="card-title">${esc(e.name)}</span>`;
+  return `
     <div class="card" data-t="${e.type}">
       <div class="card-head">
-        <div class="card-title">${esc(e.name)}</div>
+        ${title}
         <span class="tag tag-${e.type}">${e.type}</span>
       </div>
       <div class="card-meta">
         <span>${SVG_CAL} ${fmt(e.date)}</span>
-        <span>${SVG_PIN} ${esc(e.loc)}</span>
+        <a class="loc-link" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.loc)}" target="_blank" rel="noopener">${SVG_PIN} ${esc(e.loc)}</a>
+        ${countdown(e.date)}
       </div>
       <div class="card-desc">${esc(e.desc)}</div>
-    </div>`).join('');
+    </div>`;
+}
+
+function render(){
+  const q=document.querySelector('.search').value.toLowerCase();
+  const today=thaiToday();
+  const match=e=>{
+    if(filter!=='all'&&e.type!==filter)return false;
+    if(q&&!e.name.toLowerCase().includes(q)&&!e.loc.toLowerCase().includes(q))return false;
+    return true;
+  };
+  const upcoming=EVENTS.filter(e=>e.date>=today&&match(e)).sort((a,b)=>a.date.localeCompare(b.date));
+  const past=EVENTS.filter(e=>e.date<today&&match(e)).sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById('count').textContent=upcoming.length+' upcoming event'+(upcoming.length!==1?'s':'');
+  const g=document.getElementById('grid');
+  g.innerHTML=upcoming.length?upcoming.map(card).join(''):'<div class="empty">No upcoming events match your search.</div>';
+  const gp=document.getElementById('grid-past');
+  const ph=document.getElementById('past-head');
+  if(past.length){gp.innerHTML=past.map(card).join('');ph.classList.remove('hidden');}
+  else{gp.innerHTML='';ph.classList.add('hidden');}
 }
 
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
@@ -222,23 +252,30 @@ function setFilter(btn){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');filter=btn.dataset.t;render();
 }
-function openModal(){document.getElementById('overlay').classList.add('open');}
-function closeModal(){document.getElementById('overlay').classList.remove('open');}
-document.getElementById('overlay').addEventListener('click',function(e){if(e.target===this)closeModal();});
 
-function saveEvent(){
-  const n=document.getElementById('f-name').value.trim();
-  const d=document.getElementById('f-date').value;
-  const l=document.getElementById('f-loc').value.trim();
-  const t=document.getElementById('f-type').value;
-  const desc=document.getElementById('f-desc').value.trim();
-  if(!n||!d||!l){alert('Fill in name, date, and location.');return;}
-  events.push({name:n,date:d,loc:l,type:t,desc:desc||'No description provided.'});
-  save();render();closeModal();
-  ['f-name','f-date','f-loc','f-desc'].forEach(id=>document.getElementById(id).value='');
+const HANDLES={
+  line:{handle:'pankajahuja',url:'https://line.me/R/ti/p/~pankajahuja'},
+  ig:{handle:'pankajahuja',url:'https://instagram.com/pankajahuja'},
+  wechat:{handle:'pankajoa',url:null}
+};
+function reveal(btn){
+  const h=HANDLES[btn.dataset.id];if(!h)return;
+  btn.classList.add('revealed');
+  const label=btn.textContent.split(' —')[0];
+  if(h.url){
+    const a=document.createElement('a');
+    a.className='reveal-btn revealed';a.href=h.url;a.target='_blank';a.rel='noopener';
+    a.textContent=label+' — @'+h.handle;
+    btn.replaceWith(a);
+  }else{
+    btn.textContent=label+' — '+h.handle;
+    btn.onclick=()=>navigator.clipboard?.writeText(h.handle);
+    btn.title='Click to copy';
+  }
 }
 
-load();render();
+document.getElementById('updated-date').textContent=fmt(thaiToday());
+render();
 </script>
 </body>
 </html>
