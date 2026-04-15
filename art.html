@@ -3,39 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>4CUF — Thailand Car Events | Meets, Track Days, Shows & Cruises</title>
-<meta name="description" content="Discover car events across Thailand — meets, track days, shows, and cruises in Bangkok, Pattaya, Chiang Mai, Phuket and beyond.">
-<meta name="keywords" content="Thailand car events, car meets Bangkok, track days Thailand, car shows Pattaya, JDM Thailand, car cruise Chiang Mai, Thai car culture, supercar events Thailand">
+<title>Thailand Art Events — Doujin, Illustration, Fairs & Markets</title>
+<meta name="description" content="A curated calendar of art, doujin, illustration and maker events across Thailand. The stuff you can't find on Google.">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://www.4cuf.com">
-<meta property="og:title" content="4CUF — Thailand Car Events">
-<meta property="og:description" content="Find car events across Thailand. Meets, track days, shows, and cruises.">
+<meta property="og:title" content="Thailand Art Events">
+<meta property="og:description" content="Curated calendar of doujin, illustration, and maker events across Thailand.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_TH">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="4CUF — Thailand Car Events">
-<meta name="twitter:description" content="Find car events across Thailand. Meets, track days, shows, and cruises.">
-<meta name="theme-color" content="#ff3e1d">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"4CUF","description":"Car events board for Thailand — meets, track days, shows, and cruises","url":"https://www.4cuf.com"}</script>
+<meta name="theme-color" content="#a78bfa">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
 --bg:#0a0a0a;--surface:#111;--surface2:#1a1a1a;--border:#222;
---text:#e8e8e8;--text2:#888;--accent:#ff3e1d;--accent2:#ff6b4a;
---meet:#22d3ee;--track:#f59e0b;--show:#a78bfa;--cruise:#34d399;
+--text:#e8e8e8;--text2:#888;--accent:#a78bfa;--accent2:#c4b5fd;
+--con:#22d3ee;--fair:#f59e0b;--market:#f472b6;--exhibit:#34d399;
 --radius:6px;--font:"DM Sans",sans-serif;--display:"Bebas Neue",sans-serif;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.5;min-height:100vh;overflow-x:hidden}
-::selection{background:var(--accent);color:#fff}
+::selection{background:var(--accent);color:#000}
 ::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
 
 header{padding:2rem 1.5rem 1rem;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
 .logo{font-family:sans-serif;font-size:clamp(2.4rem,6vw,3.2rem);letter-spacing:.1em;line-height:1;color:#fff;font-weight:700}
-.logo span{color:#fff}
 .logo small{display:block;font-family:var(--font);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text2);font-weight:400;margin-top:.4rem}
 .updated{font-family:var(--font);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
 .updated b{color:var(--accent);font-weight:600;letter-spacing:.04em}
@@ -49,7 +42,7 @@ header{padding:2rem 1.5rem 1rem;max-width:1100px;margin:0 auto;display:flex;just
   text-decoration:none;display:inline-block;white-space:nowrap;
 }
 .reveal-btn:hover{border-color:var(--accent);color:var(--text)}
-.reveal-btn.revealed{background:var(--accent);border-color:var(--accent);color:#fff}
+.reveal-btn.revealed{background:var(--accent);border-color:var(--accent);color:#000}
 .siblings{font-size:.7rem;color:var(--text2);letter-spacing:.05em}
 .siblings a{color:var(--accent);text-decoration:none;font-weight:600}
 .siblings a:hover{color:var(--accent2)}
@@ -68,11 +61,11 @@ background:var(--surface);color:var(--text2);border-radius:var(--radius);cursor:
 transition:all .15s;text-transform:uppercase;letter-spacing:.04em;font-family:var(--font);
 }
 .filter-btn:hover{border-color:#444;color:var(--text)}
-.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
-.filter-btn[data-t="meet"].active{background:var(--meet);border-color:var(--meet);color:#000}
-.filter-btn[data-t="track"].active{background:var(--track);border-color:var(--track);color:#000}
-.filter-btn[data-t="show"].active{background:var(--show);border-color:var(--show);color:#000}
-.filter-btn[data-t="cruise"].active{background:var(--cruise);border-color:var(--cruise);color:#000}
+.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#000}
+.filter-btn[data-t="con"].active{background:var(--con);border-color:var(--con);color:#000}
+.filter-btn[data-t="fair"].active{background:var(--fair);border-color:var(--fair);color:#000}
+.filter-btn[data-t="market"].active{background:var(--market);border-color:var(--market);color:#000}
+.filter-btn[data-t="exhibit"].active{background:var(--exhibit);border-color:var(--exhibit);color:#000}
 
 .grid{max-width:1100px;margin:1rem auto;padding:0 1.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.8rem}
 .card{
@@ -80,10 +73,10 @@ background:var(--surface);border:1px solid var(--border);border-radius:var(--rad
 padding:1.2rem;cursor:default;transition:border-color .15s,transform .15s;position:relative;overflow:hidden;
 }
 .card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}
-.card[data-t="meet"]::before{background:var(--meet)}
-.card[data-t="track"]::before{background:var(--track)}
-.card[data-t="show"]::before{background:var(--show)}
-.card[data-t="cruise"]::before{background:var(--cruise)}
+.card[data-t="con"]::before{background:var(--con)}
+.card[data-t="fair"]::before{background:var(--fair)}
+.card[data-t="market"]::before{background:var(--market)}
+.card[data-t="exhibit"]::before{background:var(--exhibit)}
 .card:hover{border-color:#333;transform:translateY(-2px)}
 .card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem;margin-bottom:.5rem}
 .card-title{font-family:var(--display);font-size:1.35rem;letter-spacing:.03em;line-height:1.1;color:var(--text);text-decoration:none;display:inline-block}
@@ -94,17 +87,17 @@ a.card-title:hover .ext{opacity:1}
 font-size:.6rem;font-weight:600;padding:.2rem .5rem;border-radius:3px;
 text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
 }
-.tag-meet{background:rgba(34,211,238,.12);color:var(--meet)}
-.tag-track{background:rgba(245,158,11,.12);color:var(--track)}
-.tag-show{background:rgba(167,139,250,.12);color:var(--show)}
-.tag-cruise{background:rgba(52,211,153,.12);color:var(--cruise)}
+.tag-con{background:rgba(34,211,238,.12);color:var(--con)}
+.tag-fair{background:rgba(245,158,11,.12);color:var(--fair)}
+.tag-market{background:rgba(244,114,182,.12);color:var(--market)}
+.tag-exhibit{background:rgba(52,211,153,.12);color:var(--exhibit)}
 .card-meta{display:flex;gap:1rem;font-size:.78rem;color:var(--text2);margin-bottom:.5rem;flex-wrap:wrap;align-items:center}
 .card-meta svg{width:13px;height:13px;vertical-align:-2px;margin-right:3px;opacity:.6}
 .loc-link{color:var(--text2);text-decoration:none;transition:color .15s}
 .loc-link:hover{color:var(--accent)}
 .loc-link:hover svg{opacity:1}
-.countdown{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.18rem .45rem;border-radius:3px;background:rgba(255,62,29,.12);color:var(--accent);white-space:nowrap}
-.countdown.soon{background:var(--accent);color:#fff}
+.countdown{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.18rem .45rem;border-radius:3px;background:rgba(167,139,250,.15);color:var(--accent);white-space:nowrap}
+.countdown.soon{background:var(--accent);color:#000}
 .countdown.today{background:#fff;color:#000;animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .card-desc{font-size:.8rem;color:#999;line-height:1.5}
@@ -132,9 +125,9 @@ text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
 <body>
 
 <header>
-  <div class="logo">4<span>CUF</span><small>Thailand Car Events — by Pankaj Ahuja</small></div>
+  <div class="logo">ART<small>Thailand Art Events — curated</small></div>
   <div class="header-right">
-    <div class="siblings">Also: <a href="art.html">Art →</a></div>
+    <div class="siblings">Also: <a href="index.html">Cars →</a></div>
     <div class="contact"><span class="contact-label">Talk to me:</span>
       <button class="reveal-btn" data-id="line" onclick="reveal(this)">Line</button>
       <button class="reveal-btn" data-id="ig" onclick="reveal(this)">Instagram</button>
@@ -150,10 +143,10 @@ text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
   <input class="search" type="text" placeholder="Search events or locations…" oninput="render()">
   <div class="filters">
     <button class="filter-btn active" data-t="all" onclick="setFilter(this)">All</button>
-    <button class="filter-btn" data-t="meet" onclick="setFilter(this)">Meets</button>
-    <button class="filter-btn" data-t="track" onclick="setFilter(this)">Track</button>
-    <button class="filter-btn" data-t="show" onclick="setFilter(this)">Shows</button>
-    <button class="filter-btn" data-t="cruise" onclick="setFilter(this)">Cruise</button>
+    <button class="filter-btn" data-t="con" onclick="setFilter(this)">Cons</button>
+    <button class="filter-btn" data-t="fair" onclick="setFilter(this)">Fairs</button>
+    <button class="filter-btn" data-t="market" onclick="setFilter(this)">Markets</button>
+    <button class="filter-btn" data-t="exhibit" onclick="setFilter(this)">Exhibits</button>
   </div>
 </div>
 
@@ -168,25 +161,13 @@ const SVG_CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 const SVG_PIN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
 
 const EVENTS=[
-{name:"TSS Round 1 — Chang Circuit",date:"2026-05-21",loc:"Chang International Circuit, Buriram",type:"track",desc:"Season-opening race weekend of the Thailand Super Series. GT3, Super Production, TCR Thailand and support classes. May 21–24.",url:"https://51gt3.com/en/article/101332/tss-thailand-super-series-2026-provisional-calendar"},
-{name:"BMW M Race Track Training",date:"2026-05-16",loc:"Bira International Circuit, Pattaya",type:"track",desc:"Two-day factory M performance training at Bira. Briefing Friday night, full track day Saturday & Sunday. May 16–17.",url:"https://www.bmw.co.th/en/topics/magazine/bmw-m-race-track-training.html"},
-{name:"Automotive Manufacturing Expo 2026",date:"2026-06-17",loc:"BITEC Bangna, Bangkok",type:"show",desc:"ASEAN's biggest automotive parts & manufacturing technology show. 21st edition. Trade-focused but open to enthusiasts. Jun 17–20.",url:"https://www.automanexpo.com/"},
-{name:"Bangsaen Grand Prix 2026",date:"2026-07-01",loc:"Bangsaen Street Circuit, Chonburi",type:"track",desc:"20th anniversary of Thailand's biggest street race. GT3, Porsche Carrera Cup Asia, F4 SEA, TCR support. Jul 1–5.",url:"https://renndriver.com/events/bangsaen-grand-prix/"},
-{name:"IMPACT Speed Fest 2026",date:"2026-07-17",loc:"IMPACT Challenger Hall 2-3, Bangkok",type:"show",desc:"2,500+ cars, 300+ brands, 100+ clubs. Live restoration, auctions, rare builds including HKS R32 and MADLANE 935.",url:"https://impactspeedfest.com/"},
-{name:"Thailand International Motor Expo 2026",date:"2026-12-02",loc:"IMPACT Challenger 1-3, Nonthaburi",type:"show",desc:"The 43rd Motor Expo. 12-day showcase of production cars, EVs, hydrogen & e-fuel concepts. Dec 2–13.",url:"https://www.motorexpo.co.th/"},
-{name:"Das Treffen 11",date:"2026-12-01",loc:"Impact Speed Park, Bangkok",type:"meet",desc:"Southeast Asia's largest Porsche gathering. Air-cooled icons, modern GTs, rare builds, pop-up shops. Exact December date TBA.",url:"https://www.facebook.com/DasTreffenThailand/"},
-{name:"Rising Sunday — Monthly Meet",date:"2026-05-03",loc:"Block 28, Samyan, Bangkok",type:"meet",desc:"Bangkok's premier monthly cars & coffee. JDM legends, European exotics, old-school rides. First Sunday of the month, free entry.",url:"https://renndriver.com/events/rising-sunday/"},
-{name:"Only Octane Cars & Coffee",date:"2026-04-26",loc:"Crystal Design Center (CDC), Bangkok",type:"meet",desc:"Classic cars & coffee-style Sunday morning meet at CDC. Supercars, classics, JDM builds. Relaxed, community-driven.",url:"https://www.timeout.com/bangkok/things-to-do/only-octane-cars-coffee"},
-{name:"Curvistan Bangkok — Porsche Meet",date:"2026-04-18",loc:"Curvistan, Thonglor, Bangkok",type:"meet",desc:"Café + gallery + clubhouse by Stefan Bogner. Rotating Porsche exhibits, weekend gatherings, design-minded crowd.",url:"https://renndriver.com/guides/curvistan-bangkok/"},
-{name:"Bangkok International Motor Show 2026",date:"2026-03-25",loc:"IMPACT Muang Thong Thani, Bangkok",type:"show",desc:"The 47th edition. Theme 'Iconic Synchronicity'. 45 brands, new EV launches from Tesla, Chery and more. Mar 25 – Apr 5.",url:"https://bims47.motorshow.in.th/en/"},
-{name:"JDM & Custom Culture BKK",date:"2026-03-28",loc:"Loading Area, Challenger Hall, Bangkok",type:"show",desc:"Outdoor showcase at BIMS — 100+ modified and JDM cars per day. Car clubs rolled in across the weekend. Mar 28–29.",url:"https://bims47.motorshow.in.th/en/"},
-{name:"MotoGP Thailand Grand Prix 2026",date:"2026-02-27",loc:"Chang International Circuit, Buriram",type:"track",desc:"MotoGP 2026 season opener. Three days of practice, sprint, and the full-length GP. Feb 27 – Mar 1.",url:"https://www.motogp.com/en/calendar/2026/event/thailand/364a0bd9-d3c2-4ab3-a4cd-211ff469953e"},
-{name:"HCD Night Track Day",date:"2026-03-19",loc:"Chang International Circuit, Buriram",type:"track",desc:"After-dark lapping session organised by HDrive. Open pitlane, instruction available, street cars welcome.",url:"https://www.hdrive-racing.com/post/hcd-track-day-2026"},
-{name:"TSS Finale — Chang Circuit",date:"2026-10-30",loc:"Chang International Circuit, Buriram",type:"track",desc:"Season finale of the Thailand Super Series. GT3, GT4, GT Cup and support classes decide the championship. Oct 30 – Nov 1.",url:"https://en.wikipedia.org/wiki/2026_Thailand_Super_Series"},
-{name:"D1GP Thailand — Season Finale",date:"2026-12-18",loc:"Chang International Circuit, Buriram",type:"track",desc:"Drift championship finale rounds 5 & 6 at BRIC's drift track. Night running, tandem battles. Dec 18–20.",url:"https://www.facebook.com/ChangCircuitOfficial/posts/1000824608937389/"},
-{name:"Cars & Coffee Chiang Mai",date:"2026-05-02",loc:"Central Chiang Mai Festival rooftop",type:"meet",desc:"Monthly morning meet on the rooftop carpark — enthusiast turnout 7–11am, free entry, any car welcome.",url:"https://www.facebook.com/carsandcoffeechiangmai/"},
-{name:"D1GP Thailand — Season Opener",date:"2026-04-03",loc:"Chang International Circuit, Buriram",type:"track",desc:"Opening drift rounds of the 2026 D1GP Thailand season with night running at BRIC drift track. Apr 3–5.",url:"https://www.facebook.com/d1gpthailand/posts/920490230823045/"},
-{name:"Landed Show Thailand",date:"2026-02-14",loc:"Rancho Charnvee Resort, Khao Yai",type:"show",desc:"Outdoor luxury & supercar showcase with curated classics, vendor booths and hospitality at a Khao Yai golf resort.",url:"https://renndriver.com/resources/thailand-car-events/"}
+{name:"Illust Fusion EXPO 2026",date:"2026-06-13",loc:"Paragon Hall, Siam Paragon, Bangkok",type:"fair",desc:"Two-day illustration + handmade goods fair. Artist booths by lottery, doujin products welcome. 10am–8pm, ฿120/day.",url:"https://if.enterdock.com/enginfoexpo/"},
+{name:"Bangkok Illustration Fair 2026",date:"2026-10-22",loc:"centralwOrld PULSE, 7th floor, Bangkok",type:"fair",desc:"International illustration fair with exhibitions, sales, talks, and portfolio reviews. Oct 22–25.",url:"https://www.bangkokillustrationfair.com/"},
+{name:"Comic Square 10",date:"2027-03-06",loc:"Union Hall, Union Mall, Bangkok",type:"con",desc:"Thailand's annual doujinshi convention, powered by Anitime. Expected early March 2027 based on the yearly pattern.",url:"https://cq.enterdock.com/en/about-cq/"},
+{name:"Artbox Bangkok",date:"2026-05-02",loc:"JJ Green / rotating venues, Bangkok",type:"market",desc:"Creative night market — artists, designers, indie food, live music. Rotating weekends throughout the year.",url:"https://www.facebook.com/ArtBoxThailand/"},
+{name:"Maker Faire Bangkok 2026",date:"2026-08-22",loc:"The Street Ratchada, Bangkok",type:"fair",desc:"Makers, DIY builders, robotics, handmade. Typically late August — confirm date closer to the event.",url:"https://www.facebook.com/MakerFaireBangkok/"},
+{name:"Comic Square 9",date:"2026-03-07",loc:"Union Hall, Union Mall, Bangkok",type:"con",desc:"Thailand doujinshi convention. Fan art, circles, merch. Mar 7–8, 11am–6pm.",url:"https://www.zipeventapp.com/e/COMIC-SQUARE-9-85DF230A"},
+{name:"Bangkok Design Week 2026",date:"2026-02-07",loc:"Charoenkrung, Talat Noi, Bangrak, Bangkok",type:"exhibit",desc:"City-wide creative festival. Installations, workshops, talks, open studios across old town Bangkok.",url:"https://www.bangkokdesignweek.com/"}
 ];
 
 let filter='all';
