@@ -16,6 +16,9 @@
 <meta name="twitter:title" content="4CUF — Thailand Car Events">
 <meta name="twitter:description" content="Find car events across Thailand. Meets, track days, shows, and cruises.">
 <meta name="theme-color" content="#ff3e1d">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"4CUF","description":"Car events board for Thailand — meets, track days, shows, and cruises","url":"https://www.4cuf.com"}</script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap');
@@ -34,9 +37,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:
 ::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
 
 header{padding:2rem 1.5rem 1rem;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
-.logo{font-family:sans-serif;font-size:clamp(2.4rem,6vw,3.2rem);letter-spacing:.1em;line-height:1;color:#fff;font-weight:700}
-.logo span{color:#fff}
-.logo small{display:block;font-family:var(--font);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text2);font-weight:400;margin-top:.4rem}
+.logo{line-height:1;display:flex;flex-direction:column;align-items:flex-start}
+.logo img{height:clamp(3rem,7vw,3.8rem);width:auto;display:block}
+.logo small{display:block;font-family:var(--font);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text2);font-weight:400;margin-top:.5rem}
 .updated{font-family:var(--font);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
 .updated b{color:var(--accent);font-weight:600;letter-spacing:.04em}
 .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:.5rem}
@@ -108,12 +111,16 @@ text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
 .countdown.today{background:#fff;color:#000;animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .card-desc{font-size:.8rem;color:#999;line-height:1.5}
+.card-poster{margin:-1.2rem -1.2rem 1rem;aspect-ratio:3/4;overflow:hidden;background:#000;max-height:320px}
+.card-poster img{width:100%;height:100%;object-fit:cover;display:block}
 .empty{grid-column:1/-1;text-align:center;padding:3rem 1rem;color:var(--text2);font-size:.9rem}
 
 .stripe{max-width:1100px;margin:0 auto;padding:0 1.5rem}
 .stripe hr{border:none;border-top:1px solid var(--border)}
 
 .count{max-width:1100px;margin:0 auto;padding:.4rem 1.5rem;font-size:.72rem;color:var(--text2);letter-spacing:.03em}
+.disclaimer{max-width:1100px;margin:0 auto;padding:.5rem 1.5rem;font-size:.72rem;color:var(--text2);letter-spacing:.02em;font-style:italic;opacity:.75}
+@media(max-width:640px){.disclaimer{padding:.5rem 1rem}}
 
 .past-head{max-width:1100px;margin:2.5rem auto .4rem;padding:0 1.5rem;font-family:var(--display);font-size:1.6rem;letter-spacing:.06em;color:var(--text2);font-weight:400;border-top:1px solid var(--border);padding-top:1.5rem}
 .past-head.hidden{display:none}
@@ -132,7 +139,7 @@ text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
 <body>
 
 <header>
-  <div class="logo">4<span>CUF</span><small>Thailand Car Events — by Pankaj Ahuja</small></div>
+  <div class="logo"><img src="logo.svg" alt="4CUF"><small>Thailand Car Events</small></div>
   <div class="header-right">
     <div class="siblings">Also: <a href="art.html">Art →</a></div>
     <div class="contact"><span class="contact-label">Talk to me:</span>
@@ -158,6 +165,7 @@ text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;flex-shrink:0;
 </div>
 
 <div class="count" id="count"></div>
+<div class="disclaimer">Please click through to each event's linked source, or do a quick independent check, before you attend — details can change and errors slip in.</div>
 <div class="grid" id="grid"></div>
 
 <h2 class="past-head" id="past-head">Past Events</h2>
@@ -171,20 +179,17 @@ const EVENTS=[
 {name:"TSS Round 1 — Chang Circuit",date:"2026-05-21",loc:"Chang International Circuit, Buriram",type:"track",desc:"Season-opening race weekend of the Thailand Super Series. GT3, Super Production, TCR Thailand and support classes. May 21–24.",url:"https://51gt3.com/en/article/101332/tss-thailand-super-series-2026-provisional-calendar"},
 {name:"BMW M Race Track Training",date:"2026-05-16",loc:"Bira International Circuit, Pattaya",type:"track",desc:"Two-day factory M performance training at Bira. Briefing Friday night, full track day Saturday & Sunday. May 16–17.",url:"https://www.bmw.co.th/en/topics/magazine/bmw-m-race-track-training.html"},
 {name:"Automotive Manufacturing Expo 2026",date:"2026-06-17",loc:"BITEC Bangna, Bangkok",type:"show",desc:"ASEAN's biggest automotive parts & manufacturing technology show. 21st edition. Trade-focused but open to enthusiasts. Jun 17–20.",url:"https://www.automanexpo.com/"},
-{name:"Bangsaen Grand Prix 2026",date:"2026-07-01",loc:"Bangsaen Street Circuit, Chonburi",type:"track",desc:"20th anniversary of Thailand's biggest street race. GT3, Porsche Carrera Cup Asia, F4 SEA, TCR support. Jul 1–5.",url:"https://renndriver.com/events/bangsaen-grand-prix/"},
+{name:"Bangsaen Grand Prix 2026",date:"2026-07-03",loc:"Bangsaen Street Circuit, Chonburi",type:"track",desc:"20th anniversary of Thailand's biggest street race. GT3, Porsche Carrera Cup Asia, TCR support. Jul 3–5.",url:"https://renndriver.com/events/bangsaen-grand-prix/"},
 {name:"IMPACT Speed Fest 2026",date:"2026-07-17",loc:"IMPACT Challenger Hall 2-3, Bangkok",type:"show",desc:"2,500+ cars, 300+ brands, 100+ clubs. Live restoration, auctions, rare builds including HKS R32 and MADLANE 935.",url:"https://impactspeedfest.com/"},
 {name:"Thailand International Motor Expo 2026",date:"2026-12-02",loc:"IMPACT Challenger 1-3, Nonthaburi",type:"show",desc:"The 43rd Motor Expo. 12-day showcase of production cars, EVs, hydrogen & e-fuel concepts. Dec 2–13.",url:"https://www.motorexpo.co.th/"},
-{name:"Das Treffen 11",date:"2026-12-01",loc:"Impact Speed Park, Bangkok",type:"meet",desc:"Southeast Asia's largest Porsche gathering. Air-cooled icons, modern GTs, rare builds, pop-up shops. Exact December date TBA.",url:"https://www.facebook.com/DasTreffenThailand/"},
 {name:"Rising Sunday — Monthly Meet",date:"2026-05-03",loc:"Block 28, Samyan, Bangkok",type:"meet",desc:"Bangkok's premier monthly cars & coffee. JDM legends, European exotics, old-school rides. First Sunday of the month, free entry.",url:"https://renndriver.com/events/rising-sunday/"},
 {name:"Only Octane Cars & Coffee",date:"2026-04-26",loc:"Crystal Design Center (CDC), Bangkok",type:"meet",desc:"Classic cars & coffee-style Sunday morning meet at CDC. Supercars, classics, JDM builds. Relaxed, community-driven.",url:"https://www.timeout.com/bangkok/things-to-do/only-octane-cars-coffee"},
-{name:"Curvistan Bangkok — Porsche Meet",date:"2026-04-18",loc:"Curvistan, Thonglor, Bangkok",type:"meet",desc:"Café + gallery + clubhouse by Stefan Bogner. Rotating Porsche exhibits, weekend gatherings, design-minded crowd.",url:"https://renndriver.com/guides/curvistan-bangkok/"},
 {name:"Bangkok International Motor Show 2026",date:"2026-03-25",loc:"IMPACT Muang Thong Thani, Bangkok",type:"show",desc:"The 47th edition. Theme 'Iconic Synchronicity'. 45 brands, new EV launches from Tesla, Chery and more. Mar 25 – Apr 5.",url:"https://bims47.motorshow.in.th/en/"},
-{name:"JDM & Custom Culture BKK",date:"2026-03-28",loc:"Loading Area, Challenger Hall, Bangkok",type:"show",desc:"Outdoor showcase at BIMS — 100+ modified and JDM cars per day. Car clubs rolled in across the weekend. Mar 28–29.",url:"https://bims47.motorshow.in.th/en/"},
+{name:"Bangkok Hot Rod Custom Show 2026",date:"2026-05-16",loc:"IMPACT Exhibition Hall 11-12, Bangkok",type:"show",desc:"Thailand's premier custom & hot rod show. Nation's largest gathering of custom builds, judged by international industry experts. May 16–17, 11am–10pm.",url:"https://www.impact.co.th/en/visitors/event-calendar/exhibition-public/bangkok-hot-rod-custom-show-2026"},
 {name:"MotoGP Thailand Grand Prix 2026",date:"2026-02-27",loc:"Chang International Circuit, Buriram",type:"track",desc:"MotoGP 2026 season opener. Three days of practice, sprint, and the full-length GP. Feb 27 – Mar 1.",url:"https://www.motogp.com/en/calendar/2026/event/thailand/364a0bd9-d3c2-4ab3-a4cd-211ff469953e"},
 {name:"HCD Night Track Day",date:"2026-03-19",loc:"Chang International Circuit, Buriram",type:"track",desc:"After-dark lapping session organised by HDrive. Open pitlane, instruction available, street cars welcome.",url:"https://www.hdrive-racing.com/post/hcd-track-day-2026"},
 {name:"TSS Finale — Chang Circuit",date:"2026-10-30",loc:"Chang International Circuit, Buriram",type:"track",desc:"Season finale of the Thailand Super Series. GT3, GT4, GT Cup and support classes decide the championship. Oct 30 – Nov 1.",url:"https://en.wikipedia.org/wiki/2026_Thailand_Super_Series"},
 {name:"D1GP Thailand — Season Finale",date:"2026-12-18",loc:"Chang International Circuit, Buriram",type:"track",desc:"Drift championship finale rounds 5 & 6 at BRIC's drift track. Night running, tandem battles. Dec 18–20.",url:"https://www.facebook.com/ChangCircuitOfficial/posts/1000824608937389/"},
-{name:"Cars & Coffee Chiang Mai",date:"2026-05-02",loc:"Central Chiang Mai Festival rooftop",type:"meet",desc:"Monthly morning meet on the rooftop carpark — enthusiast turnout 7–11am, free entry, any car welcome.",url:"https://www.facebook.com/carsandcoffeechiangmai/"},
 {name:"D1GP Thailand — Season Opener",date:"2026-04-03",loc:"Chang International Circuit, Buriram",type:"track",desc:"Opening drift rounds of the 2026 D1GP Thailand season with night running at BRIC drift track. Apr 3–5.",url:"https://www.facebook.com/d1gpthailand/posts/920490230823045/"},
 {name:"Landed Show Thailand",date:"2026-02-14",loc:"Rancho Charnvee Resort, Khao Yai",type:"show",desc:"Outdoor luxury & supercar showcase with curated classics, vendor booths and hospitality at a Khao Yai golf resort.",url:"https://renndriver.com/resources/thailand-car-events/"}
 ];
@@ -217,8 +222,10 @@ function countdown(d){
 
 function card(e){
   const title=e.url?`<a class="card-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)} <span class="ext">↗</span></a>`:`<span class="card-title">${esc(e.name)}</span>`;
+  const poster=e.poster?`<div class="card-poster"><img src="${esc(e.poster)}" alt="${esc(e.name)} poster" loading="lazy"></div>`:'';
   return `
     <div class="card" data-t="${e.type}">
+      ${poster}
       <div class="card-head">
         ${title}
         <span class="tag tag-${e.type}">${e.type}</span>
