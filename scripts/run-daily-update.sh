@@ -6,8 +6,7 @@ project_dir=${script_dir:h}
 codex_bin='/Users/pankajahuja/.local/bin/codex'
 
 cd "$project_dir"
-exec "$codex_bin" exec \
-  --search \
+exec "$codex_bin" --search exec \
   --ephemeral \
   --approve-for-me \
   --sandbox workspace-write \
