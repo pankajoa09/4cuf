@@ -9,6 +9,5 @@ cd "$project_dir"
 exec "$codex_bin" --search exec \
   --ephemeral \
   --approve-for-me \
-  --sandbox workspace-write \
   --cd "$project_dir" \
   - < "$project_dir/DAILY_TASK_PROMPT.md"
