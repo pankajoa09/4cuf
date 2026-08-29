@@ -6,7 +6,7 @@ The public car calendar is sourced from `data/events.json`. `index.html` contain
 
 The exact agent prompt is stored in `DAILY_TASK_PROMPT.md`. A macOS launch agent runs it through Codex CLI with live web search every day at 08:00 local time.
 
-The source template is `automation/com.4cuf.daily-update.plist`; the installed copy belongs at `~/Library/LaunchAgents/com.4cuf.daily-update.plist`.
+The source template is `automation/com.4cuf.daily-update.plist`; the installed copy belongs at `~/Library/LaunchAgents/com.4cuf.daily-update.plist`. The launch agent uses a dedicated checkout at `~/Library/Application Support/4cuf-automation/repo` because macOS blocks unattended processes from reading repositories under `Documents` unless the shell receives Full Disk Access.
 
 The prompt instructs the agent to:
 

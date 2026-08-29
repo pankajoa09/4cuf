@@ -1,7 +1,8 @@
 #!/bin/zsh
 set -euo pipefail
 
-project_dir='/Users/pankajahuja/Documents/Projects/4cuf'
+script_dir=${0:A:h}
+project_dir=${script_dir:h}
 codex_bin='/Users/pankajahuja/.local/bin/codex'
 
 cd "$project_dir"

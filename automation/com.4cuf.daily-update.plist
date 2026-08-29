@@ -6,10 +6,10 @@
   <string>com.4cuf.daily-update</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/Users/pankajahuja/Documents/Projects/4cuf/scripts/run-daily-update.sh</string>
+    <string>/Users/pankajahuja/Library/Application Support/4cuf-automation/repo/scripts/run-daily-update.sh</string>
   </array>
   <key>WorkingDirectory</key>
-  <string>/Users/pankajahuja/Documents/Projects/4cuf</string>
+  <string>/Users/pankajahuja/Library/Application Support/4cuf-automation/repo</string>
   <key>EnvironmentVariables</key>
   <dict>
     <key>PATH</key>
