@@ -9,11 +9,12 @@ Safety first:
 Research:
 
 1. Use live web search in both English and Thai.
-2. Review every event in `data/events.json` occurring within the next 45 days.
-3. Search for newly announced Thailand car meets, track days, cruises, motorsport events, and automotive shows occurring within the next 180 days.
-4. Start with official organizers, circuits, venues, manufacturers, and championship calendars. Use a reputable event publication only when no organizer page is available.
-5. Search Thai terms including `งานรถ`, `มีตติ้งรถ`, `สนามแข่ง`, `แทร็กเดย์`, `มอเตอร์โชว์`, and `อีเวนต์รถยนต์`, combined with the current month and year.
-6. Treat Facebook or Instagram snippets as leads. Do not mark an event confirmed unless a public organizer post or another authoritative source clearly states its date and venue.
+2. Use the built-in web search only. Do not load or use browser-control skills, browser extensions, or interactive browser tools. If a social page is not publicly searchable, treat it as unavailable and move on.
+3. Review every event in `data/events.json` occurring within the next 45 days.
+4. Search for newly announced Thailand car meets, track days, cruises, motorsport events, and automotive shows occurring within the next 180 days.
+5. Start with official organizers, circuits, venues, manufacturers, and championship calendars. Use a reputable event publication only when no organizer page is available.
+6. Search Thai terms including `งานรถ`, `มีตติ้งรถ`, `สนามแข่ง`, `แทร็กเดย์`, `มอเตอร์โชว์`, and `อีเวนต์รถยนต์`, combined with the current month and year.
+7. Treat Facebook or Instagram snippets as leads. Do not mark an event confirmed unless a public organizer post or another authoritative source clearly states its date and venue.
 
 Editing rules:
 
