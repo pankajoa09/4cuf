@@ -1,12 +1,14 @@
 # Daily car-event update
 
-The public car calendar is sourced from `data/events.json`. `index.html` contains a generated fallback copy so the page still works if the JSON request fails.
+The public car calendar is sourced from `data/events.json`. `index.html` contains a generated fallback copy so the page still works if the JSON request fails. The same sync command generates crawlable event detail pages under `events/`, plus `sitemap.xml` and `robots.txt`.
 
 ## Scheduled task
 
 The exact agent prompt is stored in `DAILY_TASK_PROMPT.md`. A macOS launch agent runs it through Codex CLI with live web search every day at 08:00 local time.
 
 The source template is `automation/com.4cuf.daily-update.plist`; the installed copy belongs at `~/Library/LaunchAgents/com.4cuf.daily-update.plist`. The launch agent uses a dedicated checkout at `~/Library/Application Support/4cuf-automation/repo` because macOS blocks unattended processes from reading repositories under `Documents` unless the shell receives Full Disk Access.
+
+Before starting research, the runner refuses a dirty checkout and fast-forwards it from the tracked remote branch. This keeps the unattended checkout aligned with site changes made elsewhere.
 
 The prompt instructs the agent to:
 
@@ -36,4 +38,4 @@ node scripts/sync-events.mjs
 node scripts/sync-events.mjs --check
 ```
 
-The first command validates `data/events.json` and regenerates the embedded fallback. The second fails if the data is invalid or the fallback is stale.
+The first command validates `data/events.json` and regenerates the embedded fallback, event detail pages, sitemap, and robots file. The second fails if the data is invalid or any generated output is stale.

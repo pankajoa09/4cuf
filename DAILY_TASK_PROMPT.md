@@ -32,5 +32,5 @@ Validation and publishing:
 2. Run `node scripts/sync-events.mjs --check`.
 3. Run `git diff --check` and review the entire diff for unsupported claims or unrelated changes.
 4. If no verified public data changed, restore any generated no-op differences and exit without committing.
-5. If verified data changed and all checks pass, stage only `data/events.json` and `index.html`, commit with a concise factual message, and push the current branch to `origin` so Netlify deploys it.
+5. If verified data changed and all checks pass, stage only `data/events.json`, `index.html`, `events/`, `sitemap.xml`, and `robots.txt`, commit with a concise factual message, and push the current branch to `origin` so Netlify deploys it.
 6. Report the searches performed, sources used, changes published, and anything needing human verification. Never publish an uncertain claim just to make a daily update.

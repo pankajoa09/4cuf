@@ -832,7 +832,7 @@ function countdown(d){
 }
 
 function card(e){
-  const title=e.url?`<a class="card-title" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.name)} <span class="ext">↗</span></a>`:`<span class="card-title">${esc(e.name)}</span>`;
+  const title=`<a class="card-title" href="/events/${encodeURIComponent(e.id)}/">${esc(e.name)}</a>`;
   const poster=e.poster?`<div class="card-poster"><img src="${esc(e.poster)}" alt="${esc(e.name)} poster" loading="lazy"></div>`:'';
   return `
     <div class="card" data-t="${e.type}">
