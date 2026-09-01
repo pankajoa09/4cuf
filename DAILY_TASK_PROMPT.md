@@ -19,6 +19,8 @@ Research:
 Editing rules:
 
 - Update only sourced facts in `data/events.json`.
+- Keep `data/events-th.json` synchronized whenever an event is added or its public name, location, or description changes. Translate those fields faithfully into natural Thai, preserve brand names, and do not add facts that are absent from the sourced English record.
+- Keep the Thai translation IDs in one-to-one correspondence with `data/events.json`, and keep both top-level `updated_at` values identical.
 - Never infer a date or venue from an annual pattern.
 - Use `confirmed` only with a clear authoritative source, `tentative` when an official source is incomplete, and `cancelled` only when cancellation is explicit.
 - Update an event's `last_verified` only when that event was actually checked against a source during this run.
@@ -32,5 +34,5 @@ Validation and publishing:
 2. Run `node scripts/sync-events.mjs --check`.
 3. Run `git diff --check` and review the entire diff for unsupported claims or unrelated changes.
 4. If no verified public data changed, restore any generated no-op differences and exit without committing.
-5. If verified data changed and all checks pass, stage only `data/events.json`, `index.html`, `events/`, `sitemap.xml`, and `robots.txt`, commit with a concise factual message, and push the current branch to `origin` so Netlify deploys it.
+5. If verified data changed and all checks pass, stage only `data/events.json`, `data/events-th.json`, `index.html`, `events/`, `th/`, `sitemap.xml`, and `robots.txt`, commit with a concise factual message, and push the current branch to `origin` so Netlify deploys it.
 6. Report the searches performed, sources used, changes published, and anything needing human verification. Never publish an uncertain claim just to make a daily update.

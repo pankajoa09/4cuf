@@ -1,6 +1,6 @@
 # Daily car-event update
 
-The public car calendar is sourced from `data/events.json`. `index.html` contains a generated fallback copy so the page still works if the JSON request fails. The same sync command generates crawlable event detail pages under `events/`, plus `sitemap.xml` and `robots.txt`.
+The public car calendar is sourced from `data/events.json`, with one-to-one Thai translations in `data/events-th.json`. The English and Thai homepages contain generated fallback copies so they still work if a JSON request fails. The same sync command generates crawlable English and Thai event detail pages under `events/` and `th/events/`, plus `sitemap.xml` and `robots.txt`.
 
 ## Scheduled task
 
@@ -16,6 +16,7 @@ The prompt instructs the agent to:
 - Search public English and Thai sources.
 - Verify near-term listings and discover newly announced events.
 - Edit only sourced facts and never invent an update.
+- Translate new or changed public event text into Thai.
 - Validate, commit, and push only genuine event-data changes.
 
 Suggested schedule: every day at 08:00 Asia/Bangkok.
@@ -38,4 +39,4 @@ node scripts/sync-events.mjs
 node scripts/sync-events.mjs --check
 ```
 
-The first command validates `data/events.json` and regenerates the embedded fallback, event detail pages, sitemap, and robots file. The second fails if the data is invalid or any generated output is stale.
+The first command validates both language datasets and regenerates the embedded fallbacks, bilingual event detail pages, sitemap, and robots file. The second fails if either dataset is invalid, a translation is missing, or any generated output is stale.
