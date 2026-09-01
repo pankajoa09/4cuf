@@ -205,7 +205,6 @@ function sitemap(data) {
   const pages = [
     { url: `${siteUrl}/`, lastmod: data.updated_at },
     { url: `${siteUrl}/th/`, lastmod: data.updated_at },
-    { url: `${siteUrl}/art.html` },
     ...data.events
       .filter(event => event.status !== 'cancelled')
       .flatMap(event => [

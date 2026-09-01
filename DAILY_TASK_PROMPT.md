@@ -3,7 +3,8 @@ Maintain the public Thailand car-events calendar in this repository.
 Safety first:
 
 - Run `git status --porcelain` before doing anything. If the worktree is not clean, stop without editing and report why.
-- Work only on the car calendar. Do not edit `art.html`.
+- Work only on the car calendar.
+- Exclude dealer roadshows, mall display booths, vehicle showcases, retail sales activations, promotional pop-ups, and manufacturer mini motor shows. Add only enthusiast/community events, racing or track events, and major independent automotive shows with clear public value.
 - Never force-push, rewrite history, delete past events, or change unrelated files.
 
 Research:

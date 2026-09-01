@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01",
+  "updated_at": "2026-07-28",
   "translations": [
     {"id":"tss-round-1-chang-circuit-2026-05-21","name":"TSS สนาม 1 — สนามช้าง อินเตอร์เนชั่นแนล เซอร์กิต","loc":"สนามช้าง อินเตอร์เนชั่นแนล เซอร์กิต จ.บุรีรัมย์","desc":"สนามเปิดฤดูกาลของรายการ Thailand Super Series รวมการแข่งขัน GT3, Super Production, TCR Thailand และรุ่นสนับสนุน วันที่ 21–24 พ.ค."},
     {"id":"bmw-m-race-track-training-2026-05-16","name":"BMW M Race Track Training","loc":"สนามพีระ อินเตอร์เนชั่นแนล เซอร์กิต พัทยา","desc":"หลักสูตรขับรถสมรรถนะสูง BMW M ที่สนามพีระเป็นเวลา 2 วัน มีการบรรยายคืนวันศุกร์และฝึกในสนามเต็มวันเสาร์–อาทิตย์ วันที่ 16–17 พ.ค."},
@@ -32,32 +32,6 @@
     {"id":"toyota-gazoo-racing-thailand-chiang-mai-2026-11-21","name":"Toyota Gazoo Racing Thailand — สนามสุดท้ายเชียงใหม่","loc":"จ.เชียงใหม่ (รอยืนยันสถานที่)","desc":"สนามปิดฤดูกาล รอบที่ 5 ของ TGR Thailand 2026 โตโยต้าประกาศจังหวัดเชียงใหม่แล้วแต่ยังไม่ระบุสถานที่ วันที่ 21–22 พ.ย."},
     {"id":"12h-super-endurance-thailand-2026-11-26","name":"Idemitsu Super Endurance Thailand 2026","loc":"สนามช้าง อินเตอร์เนชั่นแนล เซอร์กิต จ.บุรีรัมย์","desc":"สุดสัปดาห์การแข่งขันรถยนต์ทางเรียบแบบเอ็นดูรานซ์ที่สนามช้างฯ วันที่ 27–29 พ.ย."},
     {"id":"asia-road-racing-championship-buriram-2026-12-04","name":"Asia Road Racing Championship — สนามสุดท้ายบุรีรัมย์","loc":"สนามช้าง อินเตอร์เนชั่นแนล เซอร์กิต จ.บุรีรัมย์","desc":"สนามที่ 6 และสนามปิดฤดูกาล ARRC เพื่อตัดสินแชมป์รุ่น ASB1000, SS600 และรุ่นสนับสนุน วันที่ 4–6 ธ.ค."},
-    {"id":"fast-auto-show-thailand-2026-07-01","name":"FAST Auto Show Thailand 2026","loc":"ไบเทค บางนา กรุงเทพฯ","desc":"งานจำหน่ายรถกลางปีครั้งที่ 14 รวมรถใหม่ 13 แบรนด์ ผู้จำหน่ายรถมือสอง 5 ราย และโซนต้อนรับสัตว์เลี้ยง วันที่ 1–5 ก.ค."},
-    {"id":"bangkok-auto-salon-2026-08-26","name":"Bangkok Auto Salon 2026","loc":"ไบเทค ฮอลล์ 100 กรุงเทพฯ","desc":"งานรถแต่งและอุปกรณ์ยานยนต์ พร้อมโชว์รถจูนและกิจกรรมมอเตอร์สปอร์ต วันที่ 26–30 ส.ค."},
-    {"id":"nissan-upcountry-mini-motor-show-roi-et-2026-09-01","name":"Nissan Upcountry Mini Motor Show — ร้อยเอ็ด","loc":"โรบินสัน ร้อยเอ็ด จ.ร้อยเอ็ด","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 1–7 ก.ย. เวลา 10.00–21.00 น."},
-    {"id":"raat-thailand-endurance-round-3-2026-09-05","name":"RAAT Thailand Endurance Championship — สนาม 3","loc":"สนามช้าง อินเตอร์เนชั่นแนล เซอร์กิต จ.บุรีรัมย์","desc":"การแข่งขัน RAAT Thailand Endurance Championship สนามที่ 3 ประจำปี 2026 วันที่ 5–6 ก.ย."},
-    {"id":"nissan-upcountry-mini-motor-show-prachinburi-2026-09-08","name":"Nissan Upcountry Mini Motor Show — ปราจีนบุรี","loc":"โรบินสัน ปราจีนบุรี จ.ปราจีนบุรี","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 8–14 ก.ย. เวลา 10.00–21.00 น."},
-    {"id":"nissan-upcountry-mini-motor-show-phetchabun-2026-09-08","name":"Nissan Upcountry Mini Motor Show — เพชรบูรณ์","loc":"บิ๊กซี เพชรบูรณ์ จ.เพชรบูรณ์","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 8–14 ก.ย. เวลา 09.00–21.00 น."},
-    {"id":"lenso-explorer-racing-car-thailand-event-4-2026-09-11","name":"Lenso Explorer Racing Car Thailand — สนาม 4","loc":"สนามพีระ อินเตอร์เนชั่นแนล เซอร์กิต จ.ชลบุรี","desc":"การแข่งขัน Lenso Explorer Racing Car Thailand สนามที่ 4 ของฤดูกาล 2026 วันที่ 11–13 ก.ย."},
-    {"id":"nissan-bangkok-mini-motor-show-2026-09-11","name":"Nissan Bangkok Mini Motor Show","loc":"แฟชั่นไอส์แลนด์ กรุงเทพฯ","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 11–20 ก.ย. เวลา 10.00–21.00 น."},
-    {"id":"nissan-upcountry-mini-motor-show-buriram-2026-09-17","name":"Nissan Upcountry Mini Motor Show — บุรีรัมย์","loc":"โรบินสัน บุรีรัมย์ จ.บุรีรัมย์","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 17–23 ก.ย. เวลา 10.00–21.00 น."},
-    {"id":"nissan-motor-show-mae-sot-2026-09-17","name":"Nissan Motor Show — แม่สอด","loc":"โรบินสัน แม่สอด จ.ตาก","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 17–23 ก.ย. เวลา 10.00–21.00 น."},
-    {"id":"lenso-explorer-racing-car-thailand-event-5-2026-10-02","name":"Lenso Explorer Racing Car Thailand — สนาม 5","loc":"สตรีทเซอร์กิตสนามกีฬาพระยาพิชัยดาบหัก จ.อุตรดิตถ์","desc":"การแข่งขัน Lenso Explorer Racing Car Thailand สนามที่ 5 ของฤดูกาล 2026 วันที่ 2–4 ต.ค."},
-    {"id":"pt-maxnitron-songkhla-grand-prix-2026-10-14","name":"PT Maxnitron Racing Series — สงขลา กรังด์ปรีซ์","loc":"PT Songkhla Grand Prix Street Circuit จ.สงขลา","desc":"การแข่งขันเรซ 6–7 บนสตรีทเซอร์กิตชั่วคราวริมชายหาดชลาทัศน์และถนนราชดำเนิน วันที่ 14–18 ต.ค."},
-    {"id":"d1gp-thailand-rounds-3-4-2026-11-06","name":"D1GP Thailand — สนาม 3 และ 4","loc":"เมืองทองธานี จ.นนทบุรี","desc":"การแข่งขันรอบกลางฤดูกาล 2 สนามของ D1 Grand Prix Thailand 2026 วันที่ 6–8 พ.ย."},
-    {"id":"lenso-explorer-racing-car-thailand-event-6-2026-12-11","name":"Lenso Explorer Racing Car Thailand — สนาม 6","loc":"ลพบุรี สปีดเวย์ จ.ลพบุรี","desc":"สนามสุดท้ายของ Lenso Explorer Racing Car Thailand ฤดูกาล 2026 วันที่ 11–13 ธ.ค."},
-    {"id":"bmw-xpo-mega-bangna-2026-09-03","name":"BMW Xpo 2026","loc":"เมกาบางนา จ.สมุทรปราการ","desc":"งานจัดแสดงรถยนต์ BMW พร้อมประสบการณ์จากแบรนด์และข้อเสนอพิเศษ วันที่ 3–6 ก.ย."},
-    {"id":"bmw-m-cars-coffee-meet-2026-09-05","name":"BMW M Cars Coffee Meet","loc":"Fashion Galleria ชั้น 1 เมกาบางนา จ.สมุทรปราการ","desc":"มีตติ้ง Cars & Coffee ของชุมชน BMW M ฉลอง 40 ปี BMW M3 เริ่มเวลา 07.00 น. ภายในงาน BMW Xpo 2026"},
-    {"id":"nissan-ultimate-motor-show-chiang-rai-2026-09-03","name":"Nissan ในงาน The Ultimate Motor Show — เชียงราย","loc":"เซ็นทรัล เชียงราย จ.เชียงราย","desc":"บูธจัดแสดงรถยนต์นิสสันพร้อมโปรโมชันพิเศษในงาน The Ultimate Motor Show วันที่ 3–9 ก.ย. เวลา 11.00–21.00 น."},
-    {"id":"bmw-safety-training-oct-2026-10-09","name":"BMW Safety Training — รอบเดือนตุลาคม","loc":"ปทุมธานี สปีดเวย์ จ.ปทุมธานี","desc":"หลักสูตรขับขี่ปลอดภัย BMW ฝึกเบรก เปลี่ยนเลน แก้อาการหน้าดื้อ–ท้ายปัด และสลาลอม มี 3 รอบแบบหนึ่งวัน วันที่ 9–11 ต.ค."},
-    {"id":"nissan-showcase-sri-saman-2026-09-01","name":"Nissan Vehicle Showcase — ศรีสมาน","loc":"โรบินสัน ไลฟ์สไตล์ ศรีสมาน จ.นนทบุรี","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 1–30 ก.ย. เวลา 11.00–21.00 น."},
-    {"id":"nissan-showcase-central-korat-2026-09-01","name":"Nissan Vehicle Showcase — โคราช","loc":"เซ็นทรัล โคราช จ.นครราชสีมา","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 1–7 ก.ย. เวลา 11.00–21.00 น."},
-    {"id":"nissan-showcase-central-westville-2026-09-02","name":"Nissan Vehicle Showcase — เซ็นทรัล เวสต์วิลล์","loc":"เซ็นทรัล เวสต์วิลล์ จ.นนทบุรี","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 2–8 ก.ย. เวลา 11.00–21.00 น."},
-    {"id":"nissan-showcase-mega-bangna-2026-09-03","name":"Nissan Vehicle Showcase — เมกาบางนา","loc":"เมกาบางนา จ.สมุทรปราการ","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 3–9 ก.ย. เวลา 11.00–21.00 น."},
-    {"id":"bangkok-underground-riverside-2026-09-06","name":"Bangkok Underground Riverside 2026","loc":"ลานจอดรถชั้น 4 และ 4½ เทอร์มินอล 21 พระราม 3 กรุงเทพฯ","desc":"งานรวมรถแต่งในธีม The Fast Tokyo Drift วันที่ 6 ก.ย. เวลา 12.00–21.00 น."},
-    {"id":"nissan-showcase-robinson-chonburi-2026-09-15","name":"Nissan Vehicle Showcase — ชลบุรี","loc":"โรบินสัน ไลฟ์สไตล์ ชลบุรี จ.ชลบุรี","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 15–22 ก.ย. เวลา 11.00–21.00 น."},
-    {"id":"nissan-showcase-central-ubon-2026-09-15","name":"Nissan Vehicle Showcase — อุบลราชธานี","loc":"เซ็นทรัล อุบล จ.อุบลราชธานี","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 15–23 ก.ย. เวลา 11.00–21.00 น."},
-    {"id":"nissan-showcase-central-khon-kaen-2026-09-28","name":"Nissan Vehicle Showcase — ขอนแก่น","loc":"เซ็นทรัล ขอนแก่น จ.ขอนแก่น","desc":"งานจัดแสดงรถยนต์และโปรโมชันจากนิสสัน วันที่ 28 ก.ย.–4 ต.ค. เวลา 11.00–21.00 น."},
-    {"id":"asia-pacific-motorsport-championship-2026-10-23","name":"Asia-Pacific Motorsport Championship Thailand 2026","loc":"สนามพีระ เซอร์กิต พัทยา จ.ชลบุรี","desc":"การแข่งขันชิงแชมป์ที่ RAAT เป็นเจ้าภาพ ครอบคลุมมอเตอร์สปอร์ต 6 ประเภท วันที่ 23–25 ต.ค."}
+    {"id":"fast-auto-show-thailand-2026-07-01","name":"FAST Auto Show Thailand 2026","loc":"ไบเทค บางนา กรุงเทพฯ","desc":"งานจำหน่ายรถกลางปีครั้งที่ 14 รวมรถใหม่ 13 แบรนด์ ผู้จำหน่ายรถมือสอง 5 ราย และโซนต้อนรับสัตว์เลี้ยง วันที่ 1–5 ก.ค."}
   ]
 }
